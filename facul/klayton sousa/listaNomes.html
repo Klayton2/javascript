@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Nomes</title>
+    <script type="text/javascript">
+        function coletarNomes() {
+            
+            var quantidade = parseInt(prompt("Digite a quantidade de nomes que deseja inserir:"), 10);
+
+            
+            while (isNaN(quantidade) || quantidade <= 0) {
+                alert("Quantidade inválida. Por favor, digite um número maior que 0.");
+                quantidade = parseInt(prompt("Digite a quantidade de nomes que deseja inserir:"), 10);
+            }
+
+            
+            var nomes = [];
+
+            
+            for (var i = 0; i < quantidade; i++) {
+                var nome = prompt("Digite o nome " + (i + 1) + ":");
+                nomes.push(nome);
+            }
+
+            
+            var nomesOrdenados = nomes.slice().sort();
+
+            
+            var nomesMaiusculos = nomes.map(function(nome) {
+                return nome.toUpperCase();
+            });
+
+            
+            alert("Quantidade de nomes digitados: " + nomes.length + "\n" +
+                  "Nomes na ordem em que foram digitados: " + nomes.join(", ") + "\n" +
+                  "Nomes na ordem alfabética: " + nomesOrdenados.join(", ") + "\n" +
+                  "Nomes em maiúsculo: " + nomesMaiusculos.join(", "));
+        }
+    </script>
+</head>
+<body>
+    <h1>Lista de Nomes</h1>
+    <button onclick="coletarNomes()">Clique aqui para inserir nomes</button>
+</body>
+</html>
