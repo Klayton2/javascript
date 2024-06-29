@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meses</title>
+</head>
+<body>
+    <script>
+        function mostrarNomeMes(){
+            var meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+
+            var numMes = prompt("Digite o número do mês (1-12) :");
+
+            var indiceMes = parseInt(numMes, 10);
+
+            if(indiceMes >= 1 && indiceMes <= 12){
+                var nomeMes = meses[indiceMes - 1];
+                alert(numMes +"-"+ nomeMes);
+            }else{
+                alert("Número inválido. Tente novamente com números de 1 à 12 !");
+            }
+        }
+    </script>
+
+    <button onclick="mostrarNomeMes()">Clique aqui para inserir o número do mês</button>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de confirmação</title>
+</head>
+<body>
+    <button onclick="confirmacao()">Clique aqui</button>
+
+    <script>
+        function confirmacao(){
+            var res = confirm("Deseja continuar ?");
+
+            if(res){
+                alert("Você clicou em ok !");
+            
+            }else{
+                alert("Você clicou em cancelar !");
+            }
+        }
+    </script>
+</body>
+</html>

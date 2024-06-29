@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pares</title>
+</head>
+<body>
+    <script>
+        function mostrarPar(){
+            var numero = parseInt(prompt("Digite um número maior ou igual a 0:"));
+
+            while(isNaN(numero) || numero < 0){
+                alert("Número inválido. Digite um número maior ou igual a 0 :");
+
+                numero = parseInt(prompt("Digite um número maior ou igual a 0:"));
+            }
+            var numPar = [];
+
+            var somaPar = 0;
+
+            for(var i = 1;i <= numero; i++){
+                if(i % 2 === 0){
+                    numPar.push(i);
+                    somaPar += i;
+                }
+            }
+
+            alert("Você digitou o número "+numero+".\n" +
+                   "Números pares : "+numPar.join(", ") +".\n"+
+                   "Quantidade de pares: "+ numPar.length +" números.\n"+
+                   "Soma dos pares: "+ somaPar + ".");
+        }
+    </script>
+
+    <h1>Números Pares</h1>
+    <button onclick="mostrarPar()">Clique para digitar um número</button>
+</body>
+</html>
