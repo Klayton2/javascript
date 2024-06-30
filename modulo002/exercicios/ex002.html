@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de idade</title>
+</head>
+<body>
+    <script>
+        function calculoIdade(){
+
+            
+            var dia = prompt("Digite o dia de seu nascimento");
+
+            if(dia <= 0 || dia > 31){
+                
+                prompt("Por favor informe seu dia de nascimento corretamente. Digite o dia de seu nascimento");
+            }
+
+            var mes = prompt("Digite o mês de seu nascimento :");
+
+            if(mes < 0 || mes > 12){ 
+                
+                prompt("Por favor informe seu mês de nascimento corretamente. Digite o mês de seu nascimento :");
+            }
+            
+            var ano = prompt("Digite o ano de seu nascimento :");
+            if(ano < 1900 || ano >= anoAtual){
+               
+                prompt("Por favor informe seu ano de nascimento corretamente. Digite o ano de seu nascimento :");
+            }
+
+            var dataAtual = new Date;
+
+            var diaAtual = dataAtual.getDay();
+
+            var mesAtual = dataAtual.getMonth();
+
+            var anoAtual = dataAtual.getFullYear();
+            
+            if(diaAtual < dia && mesAtual <= mes){
+                idade = anoAtual - ano;
+                
+                idade --;
+            }else{
+                idade = anoAtual - ano;
+            }
+        }
+        
+        calculoIdade();
+        alert("Sua idade é "+idade);
+    </script>
+</body>
+</html>

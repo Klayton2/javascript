@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora dinânmica</title>
+</head>
+<body>
+    <script>
+            var num1 = parseInt(prompt("Digite o primeiro número da operação"));
+
+            var op = prompt("Digite o sinal da operação.(+,-,*,/,^)");
+
+            while(op != "+" && op != "-" && op != "*" && op != "/" && op != "^")
+                op = prompt("Digite o sinal da operação.(+,-,*,/)");
+            var num2 = parseInt(prompt("Digite o segundo número da operação"))
+            
+
+            var calc = 0;
+
+            if(op == '+'){
+                calc = num1 + num2;
+
+            }else if(op == '-'){
+                calc = num1 - num2;
+
+            }else if(op == '*'){
+                calc = num1 * num2;
+
+            }else if(op == '/'){
+                calc = num1 / num2;
+
+            }
+
+            
+              
+            alert("O resultado da operação é "+calc);
+        
+    </script>
+</body>
+</html>
