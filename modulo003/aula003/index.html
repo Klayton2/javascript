@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções e instâncias</title>
+</head>
+<body>
+    <script>
+        function Pessoa(){
+            this.nome = "Klayton";
+            this.idade = 21;
+            this.printNome = function(){
+                alert(this.nome);
+            }
+        }
+
+
+        function Animal(nome, peso){
+            this.nome = nome;
+            this.peso = peso;
+            this.returnAnimal = function(animal){
+                return animal;
+            }
+
+        }
+
+       
+        var animal = new Animal("Cachorro","12 kg");
+
+        var animal2 = new Animal("Gato","3 kg");
+
+        alert(animal.nome);
+
+        alert(animal2.nome);
+
+        alert(animal.returnAnimal(animal).nome);
+    </script>
+</body>
+</html>
