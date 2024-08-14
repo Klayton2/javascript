@@ -1,0 +1,17 @@
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin-left: 0px;
+}
+
+.animEsquerda{
+    transition: 1s;
+    margin-left: 10px;
+}
+
+.animEsquerda2{
+    transition: 1s;
+    margin-left: 80px;
+    background-color: blue;
+}
