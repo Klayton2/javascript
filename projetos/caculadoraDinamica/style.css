@@ -1,0 +1,40 @@
+body {
+    background-image: linear-gradient(to right,#664B39,#BB642A,#8d3f0b);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.calculadora{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #e9620849
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label{
+    width: 100%;
+    font-size: 18px;
+}
+input[type='text'],input[type='number']{
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+input[type=button]{
+    border-radius: 5px;
+    cursor: pointer;
+}

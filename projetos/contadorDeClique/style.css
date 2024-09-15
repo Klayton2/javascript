@@ -1,0 +1,48 @@
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-image: linear-gradient(to right ,#2C2CCD, #424278);
+    gap: 40px;
+}
+
+.conteudo{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao{
+    background-color: gray;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    text-decoration: solid;
+    font-weight: bold;
+}
+
+.botao:hover{
+    background-color: darkred;
+    color: white;
+    font-weight: bold;
+}
+
+#reset:hover{
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: bold;
+
+}
+#reset{
+    background-color: gray;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    text-decoration: solid;
+    font-weight: bold;
+}
