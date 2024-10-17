@@ -43,8 +43,3 @@ document.querySelector('button[name=limpar]').addEventListener('click',()=>{
 
     document.querySelector('.soma-produto h1').innerHTML = "Total: R$ 0";
 })
-
-/*<div class="lista-produto-single">
-                <h3>`+ val.nome+`</h3>
-                <h3 class="price-produto"><span>R$ `+val.valor+`</span></h3>
-        </div> */
