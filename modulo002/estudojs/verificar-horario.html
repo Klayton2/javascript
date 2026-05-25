@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+</head>
+<body>
+    <h1>Hora do dia</h1>
+    <div class="hr">
+        <div class="img"></div>
+    </div>
+    <script>
+        var agr = new Date();
+        var hora = agr.getHours();
+
+        var paragrafo = document.querySelector('div.hr');
+
+        if(hora < 12){
+            paragrafo.innerHTML = `<p>Agora são ${hora} horas.</p>`;
+
+        }else if(hora < 18) {
+            paragrafo.innerHTML = `<p>Agora são ${hora} horas.</p>`;
+        }else{
+            paragrafo.innerHTML = `<p>Agora são ${hora} horas.</p>`;
+        }
+    </script>
+</body>
+</html>
