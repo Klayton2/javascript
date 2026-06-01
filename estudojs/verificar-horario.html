@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+    <style>
+        body {
+            font: normal 15pt Arial;
+            padding: 4% 40px;
+            background-color: rgb(69, 69, 233);
+        }
+        header {
+            text-align: center;
+            color: white;
+        }
+        section{
+            background-color: white;
+            width: 500px;
+            border-radius: 15px;
+            box-shadow:  3px 3px 10px rgba(0, 0, 0, 0.548);
+            padding: 10px;
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <section>
+        <div class="hr"></div>
+        <div class="foto">
+            <img  id= img src="img/bom-dia.png" alt="">
+        </div>
+    </section>
+    <script>
+        function carregar(){
+            var agr = new Date();
+            var hora = agr.getHours();
+
+            var paragrafo = document.querySelector('div.hr');
+
+            var image = document.getElementById('img');
+
+            paragrafo.innerHTML = `<p>Agora são ${hora} horas.</p>`;
+
+            if(hora >= 0 && hora < 12){
+                
+                image.src = 'img/bom-dia.png';
+                document.body.style.background = '#f7ba49dc';
+
+            }else if(hora >= 12 && hora < 18) {
+                image.src = 'img/boa-tarde.png';
+                document.body.style.background = '#fdab12';
+            }else{
+                
+                image.src = 'img/boa-noite.png';
+                document.body.style.background = '#051b7ed0';
+            }
+    }
+    </script>
+</body>
+</html>
