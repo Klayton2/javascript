@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador</title>
+    <style>
+      body {
+        padding: 4% 40px;
+        background-color: rgb(253, 191, 109);
+      }
+      header h1 {
+        font: bolder 45pt Arial;
+        text-align: center;
+      }
+      section {
+        margin: auto;
+        background-color: white;
+        width: 400px;
+        border-radius: 15px;
+      }
+      div.contador {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      label {
+        font-size: 15pt;
+      }
+      div.contagem p {
+        font-size: 15pt;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Vamos contar</h1>
+    </header>
+    <section>
+      <div class="contador">
+        <div class="campo">
+          <label for="inicio">Inicío:</label
+          ><input type="number" name="inicio" id="inicio" />
+        </div>
+        <div class="campo">
+          <label for="fim">Fim:</label
+          ><input type="number" name="fim" id="fim" />
+        </div>
+        <div class="campo">
+          <label for="passo">Passo:</label
+          ><input type="number" name="passo" id="passo" />
+        </div>
+        <input type="button" id="btn" value="Contar" />
+        <div class="contagem">
+          <p>Iniciando contagem...</p>
+        </div>
+      </div>
+    </section>
+    <script>
+      function contagem() {
+        let inicio = Number(document.getElementById("inicio").value);
+        let fim = Number(document.getElementById("fim").value);
+        let passo = Number(document.getElementById("passo").value);
+
+        let contagem = document.querySelector(".contagem");
+
+        if (
+          document.getElementById("inicio").value === "" ||
+          document.getElementById("fim").value === "" ||
+          document.getElementById("passo").value === ""
+        ) {
+          contagem.innerHTML = "Impossível contar!";
+          return;
+        }
+
+        if (passo <= 0) {
+          alert("Passo inválido! Considerando passo = 1");
+          passo = 1;
+        }
+
+        contagem.innerHTML = "";
+        //contagem crescente
+        if(inicio < fim){
+        for (let i = inicio; i <= fim; i += passo) {
+          contagem.innerHTML += `${i} 👉🏻 `;
+        }
+
+        contagem.innerHTML += "🏁";
+      }
+      //contagem regressiva
+      else{
+        for(let i = inicio; i >= fim; c -= passo){
+            contagem.innerHTML += `${i} 👉🏻 `;
+        }
+
+        contagem.innerHTML += "🏁";
+      }
+    }
+      var btn = document.getElementById("btn");
+
+      btn.addEventListener("click", contagem);
+
+    </script>
+  </body>
+</html>

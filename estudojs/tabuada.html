@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body{
+            padding: 4% 40px;
+            background-color: rgb(253, 191, 109);
+        }
+        header h1 {
+            font: bolder 45pt Arial;
+            text-align: center;
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 10px;
+            margin: auto;
+            border-radius: 15px;
+            align-items: center;
+        }
+        div.tabuada {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <div class="numero">
+            <input type="number" name="num" id="num">
+            <input type="button" id = "calc" value="Calcular">
+        </div>
+        <div class="tabuada">
+            <select name="mostrar" id="mostrar" size="10">
+                <option>Digite um número acima...</option>
+            </select>
+            
+        </div>
+    </section>
+    <script>
+        function calcular(){
+        var num = document.getElementById('num');
+        var tab = document.getElementById('mostrar');
+
+        if(num.length == 0 ){
+            alert('Digite um número, por favor!');
+        }else{
+            let n = Number(num.value);
+            let i = 1;
+
+            tab.innerHTML = '';
+
+            while(i <= 10){
+                let item = document.createElement('option');
+                item.text = `${n} x ${i} = ${n*i}`;
+                tab.appendChild(item);
+                i++;
+            }
+        }
+        }
+        var btn = document.getElementById('calc');
+        btn.addEventListener('click', calcular);
+    </script>
+</body>
+</html>
